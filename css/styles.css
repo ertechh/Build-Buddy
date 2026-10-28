@@ -213,6 +213,13 @@ section {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
+  transition: background var(--dur-base) var(--ease-mech),
+              box-shadow var(--dur-base) var(--ease-mech);
+}
+
+.site-header.scrolled {
+  background: rgba(10, 10, 11, 0.92);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 .nav {
@@ -620,6 +627,10 @@ section {
   transition: transform var(--dur-base) var(--ease-mech);
 }
 
+.faq-item.open .faq-icon {
+  transform: rotate(90deg);
+}
+
 .faq-item.open .faq-icon::after {
   transform: translate(-50%, -50%) scaleY(0);
 }
@@ -781,6 +792,7 @@ section {
 .option:has(input:checked) {
   border-color: var(--accent);
   background: var(--accent-soft);
+  transform: scale(1.01);
 }
 
 /* Text inputs */
@@ -1007,6 +1019,28 @@ section {
 }
 
 /* ============================================
+   Touch device press feedback
+   ============================================ */
+@media (hover: none) {
+  .btn:active {
+    transform: scale(0.97) !important;
+    transition-duration: 100ms !important;
+  }
+
+  .card:active {
+    transform: scale(0.99);
+  }
+
+  .portfolio-card:active {
+    transform: scale(0.99);
+  }
+
+  .option:active {
+    transform: scale(0.99);
+  }
+}
+
+/* ============================================
    Responsive
    ============================================ */
 @media (max-width: 768px) {
@@ -1058,6 +1092,20 @@ section {
   .cursor-glow {
     display: none;
   }
+
+  /* Pronounced step transition on mobile */
+  .form-step.active {
+    animation: step-in-mobile var(--dur-base) var(--ease-mech);
+  }
+
+  @keyframes step-in-mobile {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* Stagger reveal for cards in grid */
+  .grid-3 .reveal:nth-child(2) { transition-delay: 60ms; }
+  .grid-3 .reveal:nth-child(3) { transition-delay: 120ms; }
 }
 
 /* ============================================
@@ -1084,5 +1132,9 @@ section {
 
   .hero-grid {
     animation: none;
+  }
+
+  .option:has(input:checked) {
+    transform: none;
   }
 }

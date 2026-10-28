@@ -107,6 +107,18 @@
     });
   });
 
+    /* ---------- Header scroll state ---------- */
+  const header = document.querySelector(".site-header");
+  if (header) {
+    window.addEventListener(
+      "scroll",
+      () => {
+        header.classList.toggle("scrolled", window.scrollY > 20);
+      },
+      { passive: true }
+    );
+  }
+  
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) {
