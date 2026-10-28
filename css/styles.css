@@ -1138,3 +1138,124 @@ section {
     transform: none;
   }
 }
+/* ============================================
+   Floating tools (hero)
+   ============================================ */
+.hero-tools {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.tool {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  color: var(--accent);
+  opacity: 0.12;
+  filter: drop-shadow(0 0 12px var(--accent-glow));
+  will-change: transform;
+}
+
+.tool svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Positions and motion — each drifts on a different path and speed */
+
+.tool--1 {
+  top: 15%;
+  left: 8%;
+  animation: float-1 18s ease-in-out infinite;
+}
+
+.tool--2 {
+  top: 70%;
+  left: 12%;
+  width: 36px;
+  height: 36px;
+  animation: float-2 22s ease-in-out infinite;
+}
+
+.tool--3 {
+  top: 25%;
+  right: 10%;
+  width: 44px;
+  height: 44px;
+  animation: float-3 20s ease-in-out infinite;
+}
+
+.tool--4 {
+  top: 65%;
+  right: 14%;
+  width: 52px;
+  height: 52px;
+  animation: float-4 24s ease-in-out infinite;
+}
+
+.tool--5 {
+  top: 45%;
+  left: 4%;
+  width: 32px;
+  height: 32px;
+  opacity: 0.08;
+  animation: float-5 26s ease-in-out infinite;
+}
+
+.tool--6 {
+  top: 8%;
+  right: 28%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.1;
+  animation: float-6 21s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(20px, -30px) rotate(8deg); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-25px, 20px) rotate(-6deg); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-18px, 28px) rotate(10deg); }
+}
+
+@keyframes float-4 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(24px, 18px) rotate(-8deg); }
+}
+
+@keyframes float-5 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(15px, -22px) rotate(5deg); }
+}
+
+@keyframes float-6 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, -15px) rotate(-10deg); }
+}
+
+/* Hide on mobile — they compete with the headline and cost battery */
+
+@media (max-width: 768px) {
+  .hero-tools {
+    display: block;
+  }
+}
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .tool {
+    animation: none !important;
+  }
+}
