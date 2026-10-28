@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote — Build Buddy</title>
+  <meta name="description" content="Tell Build Buddy about your project and get a quote within 24 hours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+        Build Buddy
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Get a Quote</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Start a project</span>
+        <h1>Tell me about your website.</h1>
+        <p>A few quick questions so I can give you an accurate quote. Takes about two minutes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <form class="form-shell" id="enquiry-form" novalidate>
+          <!-- Progress -->
+          <div class="form-progress">
+            <span class="form-step-label" id="step-label">01 / 09</span>
+            <div class="form-progress-track">
+              <div class="form-progress-bar" id="progress-bar"></div>
+            </div>
+          </div>
+
+          <!-- Step 1: Project type -->
+          <div class="form-step active" data-step="1">
+            <h3>What kind of website do you need?</h3>
+            <p class="hint">Pick the closest match — we can refine the details later.</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="type" value="Business / brochure site" required /><span class="dot"></span>Business / brochure site</label>
+              <label class="option"><input type="radio" name="type" value="Landing page" /><span class="dot"></span>Landing page</label>
+              <label class="option"><input type="radio" name="type" value="E-commerce / online store" /><span class="dot"></span>E-commerce / online store</label>
+              <label class="option"><input type="radio" name="type" value="Portfolio" /><span class="dot"></span>Portfolio</label>
+              <label class="option"><input type="radio" name="type" value="Blog / content site" /><span class="dot"></span>Blog / content site</label>
+              <label class="option"><input type="radio" name="type" value="Redesign of an existing site" /><span class="dot"></span>Redesign of an existing site</label>
+              <label class="option"><input type="radio" name="type" value="Not sure yet" /><span class="dot"></span>Not sure yet</label>
+            </div>
+            <p class="error">Please choose an option to continue.</p>
+            <div class="form-nav">
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Goal -->
+          <div class="form-step" data-step="2">
+            <h3>What's the main goal for this site?</h3>
+            <p class="hint">Choose the one that matters most.</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="goal" value="Get more enquiries" required /><span class="dot"></span>Get more enquiries</label>
+              <label class="option"><input type="radio" name="goal" value="Sell products online" /><span class="dot"></span>Sell products online</label>
+              <label class="option"><input type="radio" name="goal" value="Showcase my work" /><span class="dot"></span>Showcase my work</label>
+              <label class="option"><input type="radio" name="goal" value="Build credibility" /><span class="dot"></span>Build credibility</label>
+              <label class="option"><input type="radio" name="goal" value="Take bookings" /><span class="dot"></span>Take bookings</label>
+              <label class="option"><input type="radio" name="goal" value="Other" /><span class="dot"></span>Other</label>
+            </div>
+            <p class="error">Please choose an option to continue.</p>
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Content -->
+          <div class="form-step" data-step="3">
+            <h3>Do you have content ready?</h3>
+            <p class="hint">Text, images, logo — whatever you already have.</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="content" value="Yes, ready to go" required /><span class="dot"></span>Yes, ready to go</label>
+              <label class="option"><input type="radio" name="content" value="Some of it" /><span class="dot"></span>Some of it</label>
+              <label class="option"><input type="radio" name="content" value="No, I need help with copy" /><span class="dot"></span>No, I need help with copywriting</label>
+              <label class="option"><input type="radio" name="content" value="No, I need design and copy" /><span class="dot"></span>No, I need design and copy too</label>
+            </div>
+            <p class="error">Please choose an option to continue.</p>
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Pages -->
+          <div class="form-step" data-step="4">
+            <h3>Roughly how many pages?</h3>
+            <p class="hint">An estimate is fine.</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="pages" value="1 (single page)" required /><span class="dot"></span>1 (single page)</label>
+              <label class="option"><input type="radio" name="pages" value="2–5" /><span class="dot"></span>2–5</label>
+              <label class="option"><input type="radio" name="pages" value="6–10" /><span class="dot"></span>6–10</label>
+              <label class="option"><input type="radio" name="pages" value="10+" /><span class="dot"></span>10+</label>
+              <label class="option"><input type="radio" name="pages" value="Not sure" /><span class="dot"></span>Not sure</label>
+            </div>
+            <p class="error">Please choose an option to continue.</p>
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 5: Features -->
+          <div class="form-step" data-step="5">
+            <h3>Any features you need?</h3>
+            <p class="hint">Select all that apply — or skip if you're not sure.</p>
+            <div class="options">
+              <label class="option"><input type="checkbox" name="features" value="Contact / enquiry form" /><span class="dot"></span>Contact / enquiry form</label>
+              <label class="option"><input type="checkbox" name="features" value="Online booking" /><span class="dot"></span>Online booking</label>
+              <label class="option"><input type="checkbox" name="features" value="Blog" /><span class="dot"></span>Blog</label>
+              <label class="option"><input type="checkbox" name="features" value="User accounts / login" /><span class="dot"></span>User accounts / login</label>
+              <label class="option"><input type="checkbox" name="features" value="Multi-language" /><span class="dot"></span>Multi-language</label>
+              <label class="option"><input type="checkbox" name="features" value="None of these yet" /><span class="dot"></span>None of these yet</label>
+            </div>
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 6: Payment link -->
+          <div class="form-step" data-step="6">
+            <h3>Would you like a payment link on your website?</h3>
+            <p class="hint">This is for taking payments for services — deposits, invoices, consultations.</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="payment" value="Yes — full checkout on site" required /><span class="dot"></span>Yes — full checkout on the site</label>
+              <label class="option"><input type="radio" name="payment" value="Yes — simple pay button" /><span class="dot"></span>Yes — just a simple "Pay now" button</label>
+              <label class="option"><input type="radio" name="payment" value="Maybe — discuss options" /><span class="dot"></span>Maybe — I'd like to discuss options</label>
+              <label class="option"><input type="radio" name="payment" value="No — not needed" /><span class="dot"></span>No — not needed</label>
+            </div>
+            <p class="error">Please choose an option to continue.</p>
+
+            <!-- Conditional follow-up -->
+            <div id="payment-followup" style="display:none; margin-top: var(--s-5);">
+              <div class="field">
+                <label for="payment-what">What would they be paying for? <span class="optional">(optional)</span></label>
+                <input type="text" id="payment-what" name="payment_what" placeholder="e.g. deposits, consultations, invoices, products" />
+              </div>
+              <div class="field">
+                <label for="payment-provider">Do you already have a payment provider?</label>
+                <input type="text" id="payment-provider" name="payment_provider" placeholder="Stripe / PayPal / Square / None / Not sure" />
+              </div>
+            </div>
+
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 7: Budget -->
+          <div class="form-step" data-step="7">
+            <h3>What's your budget range?</h3>
+            <p class="hint">This helps me tailor the quote — no judgement either way.</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="budget" value="Under £500" required /><span class="dot"></span>Under £500</label>
+              <label class="option"><input type="radio" name="budget" value="£500–£1,500" /><span class="dot"></span>£500–£1,500</label>
+              <label class="option"><input type="radio" name="budget" value="£1,500–£3,000" /><span class="dot"></span>£1,500–£3,000</label>
+              <label class="option"><input type="radio" name="budget" value="£3,000+" /><span class="dot"></span>£3,000+</label>
+              <label class="option"><input type="radio" name="budget" value="Need guidance" /><span class="dot"></span>I need guidance on this</label>
+            </div>
+            <p class="error">Please choose an option to continue.</p>
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 8: Timeline -->
+          <div class="form-step" data-step="8">
+            <h3>When would you like it live?</h3>
+            <div class="options">
+              <label class="option"><input type="radio" name="timeline" value="ASAP" required /><span class="dot"></span>ASAP</label>
+              <label class="option"><input type="radio" name="timeline" value="Within 1 month" /><span class="dot"></span>Within 1 month</label>
+              <label class="option"><input type="radio" name="timeline" value="1–3 months" /><span class="dot"></span>1–3 months</label>
+              <label class="option"><input type="radio" name="timeline" value="Just exploring" /><span class="dot"></span>Just exploring</label>
+            </div>
+            <p class="error">Please choose an option to continue.</p>
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="button" class="btn btn-primary" data-next>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 9: Description + contact -->
+          <div class="form-step" data-step="9">
+            <h3>Describe the website you're imagining.</h3>
+            <p class="hint">What should it do? Who's it for? Any sites you like the look of? The more detail, the better — but this one's optional.</p>
+            <div class="field">
+              <label for="description">Your vision <span class="optional">(optional)</span></label>
+              <textarea id="description" name="description" placeholder="e.g. A clean site for my plumbing business. I want people to be able to book a call and see my prices. I like the look of…"></textarea>
+            </div>
+
+            <h3 style="margin-top: var(--s-5);">Your details</h3>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+              <p class="error">Please enter your name.</p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+              <p class="error">Please enter a valid email address.</p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="source">How did you hear about me? <span class="optional">(optional)</span></label>
+              <input type="text" id="source" name="source" />
+            </div>
+
+            <!-- Honeypot (hidden from humans) -->
+            <div style="position:absolute; left:-9999px;" aria-hidden="true">
+              <label for="website">Leave this empty</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" data-back>Back</button>
+              <button type="submit" class="btn btn-primary" id="submit-btn">Send my enquiry</button>
+            </div>
+          </div>
+
+          <!-- Success -->
+          <div class="form-success" id="form-success" role="status" aria-live="polite">
+            <div class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <h3>Enquiry sent.</h3>
+            <p style="margin: var(--s-3) auto 0;">Thanks — I'll come back to you within 24 hours with a quote and next steps.</p>
+            <a href="index.html" class="btn btn-ghost" style="margin-top: var(--s-5);">Back to home</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Build Buddy. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="mailto:buildbuddy5@outlook.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>

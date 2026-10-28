@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Build Buddy</title>
+  <meta name="description" content="Recent websites built by Build Buddy — business sites, landing pages and online stores." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
+        Build Buddy
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="btn btn-primary">Get a Quote</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Selected work</span>
+        <h1>Portfolio</h1>
+        <p>A few recent builds. Each one was designed and built from scratch — no templates, no page builders.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-2">
+          <article class="portfolio-card reveal">
+            <div class="portfolio-thumb">Northside Plumbing — screenshot</div>
+            <div class="portfolio-body">
+              <h3>0528 Creatives</h3>
+              <p>A designer streetwear store built for a boutique retailer moving from Instagram to a full online shop. Editorial product imagery, fast filtering by brand and size, and a simple admin panel for seasonal drops. Launched in three weeks.</p>
+              <p style="margin-top: var(--s-3); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);">Business site · 6 pages</p>
+            </div>
+          </article>
+          <article class="portfolio-card reveal">
+            <div class="portfolio-thumb">
+                 <img src="images/tendaly logo.svg" alt="Tendaly" loading="lazy" />>
+            </div>
+            <div class="portfolio-body">
+              <h3>Tendally</h3>
+              <p>A website connecting families who need care with local carers. Searchable by location, care type and availability, with each carer having a profile covering experience, qualifications and DBS status. Families send enquiries directly to carers; carers manage their own profiles through a simple login. No booking engine, no middleman fees.</p>
+              <p style="margin-top: var(--s-3); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);">Business site · payment link</p>
+            </div>
+          </article>
+          <article class="portfolio-card reveal">
+            <div class="portfolio-thumb">Field & Form — screenshot</div>
+            <div class="portfolio-body">
+              <h3>Kennores Trading</h3>
+              <p>An online grocery store for an independent supermarket expanding beyond one location. Category-first browsing with sticky aisle filters, typo-tolerant search, real-time delivery slots. Customers can save shopping lists; the owner manages stock, pricing and weekly offers from a simple admin panel.</p>
+              <p style="margin-top: var(--s-3); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);">Landing page</p>
+            <!-- </div>
+          </article>
+          <article class="portfolio-card reveal">
+            <div class="portfolio-thumb">Marlow & Co. — screenshot</div>
+            <div class="portfolio-body">
+              <h3>Marlow & Co.</h3>
+              <p>A full redesign for a legal consultancy — dated site rebuilt with a clean, professional identity, clear service pages and a consultation booking form.</p>
+              <p style="margin-top: var(--s-3); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);">Redesign · 8 pages</p>
+            </div>
+          </article>
+        </div>
+      </div> -->
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Want something like this?</h2>
+          <p>Tell me about your project and I'll come back with a quote within 24 hours.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Start your enquiry</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Build Buddy. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="mailto:@buildbuddy5@outlook.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
